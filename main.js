@@ -1,12 +1,10 @@
-grid = document.querySelector(".grid");
+const x = 10;
 
-for (let i = 0; i < 16; i++) {
+grid = document.querySelector(".grid-container");
+grid.style.cssText = `grid-template-columns: repeat(${x}, ${32/x}rem); grid-template-rows: repeat(${x}, ${32/x}rem)`;
+
+for (let i = 0; i < x*x; i++) {
     row = document.createElement("div");
-    // row.style.cssText = "display: flex; height: 1rem; width: 16rem";
-    for (let j = 0; j < 16; j++) {
-        cell = document.createElement("div");
-        // cell.style.cssText = "height: 1rem; width: 1rem";
-        row.appendChild(cell);
-    }
-    grid.appendChild(row);
+    row.style.cssText = `height: ${32/x}rem; width: ${32/x}rem; border: 0.01rem solid black`;
+    grid.append(row);
 }

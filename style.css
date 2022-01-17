@@ -5,11 +5,11 @@ body {
     align-items: center;
 }
 
-.grid {
+.grid-container {
     display: grid;
     margin: 3rem;
     padding: 0;
-    border: 1px solid black;
-    width: 16rem;
-    height: 16rem;
+    border: .5rem solid black;
+    width: 32rem;
+    height: 32rem;
 }
