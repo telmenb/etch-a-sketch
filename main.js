@@ -1,13 +1,13 @@
 function gridInit(x) {
     //grid init
     grid = document.querySelector(".grid-container");
-    grid.style.cssText = `grid-template-columns: repeat(${x}, ${40/x}rem)`;
+    grid.style.cssText = `grid-template-columns: repeat(${x}, ${32/x}rem)`;
     
     //squares init
     for (let i = 0; i < x*x; i++) {
         square = document.createElement("div");
         square.classList = "element";
-        square.style.cssText = `height: ${40/x}rem; width: ${40/x}rem`;
+        square.style.cssText = `height: ${32/x}rem; width: ${32/x}rem`;
         grid.append(square);
     }
 }
@@ -36,7 +36,7 @@ reset_button.addEventListener("click", () => {
     elements.forEach(element => element.remove());
     //TODO: sanitize user input-------------------------------------------------------------
     const x = parseInt(prompt("Enter new integer dimensions (0 < x < 101):", `${num}`), 10);
-    num = x
+    num = x;
     //--------------------------------------------------------------------------------------
     gridInit(x);
     addHover();
